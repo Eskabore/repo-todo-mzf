@@ -1,9 +1,10 @@
 import React from "react";
 import Todo from "./components/Todo";
 import Form from "./components/Form";
-import FilterButton from "./components/FilterButton.js";
+import FilterButton from "./components/FilterButton";
 
 function App(props) {
+
   function addTask(name) {
     alert(name);
   }

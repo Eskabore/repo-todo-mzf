@@ -1,11 +1,12 @@
 import React from 'react'
-import App from '../App.js'
+import addTask from '../App'
 
 function Form(props) {
     function handleSubmit(e) {
         e.preventDefault();
-        props.addTask("What's up ?");
-    }
+        props.onAddTask("Say hello!");
+      }
+    
     return (
         <form onSubmit={handleSubmit}>
         <h2 className="label-wrapper">
