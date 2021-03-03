@@ -12,6 +12,11 @@ function App(props) {
     setTasks([...tasks, newTask]);
   }
   const taskList = tasks.map((task) => (
+    function addTask(name) {
+    alert(name);
+  }
+    
+  const taskList = props.tasks.map((task) => (
     <Todo
       id={task.id}
       name={task.name}
@@ -20,8 +25,11 @@ function App(props) {
     />
   )
   );
+  
   const tasksNoun = taskList.length !==1 ? 'tasks' : 'task';
   const headingText = `${taskList.length} ${tasksNoun} remaining`;
+  ));
+  
   return (
     <div className="todoapp stack-large">
       <h1>Todo Orgonizer</h1>
@@ -31,6 +39,7 @@ function App(props) {
         <FilterButton />
         <FilterButton />
       </div>
+
       <h2 id="list-heading">{headingText}</h2>
       <ul
         role="list"
