@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 export default function Todo(props) {
-  const { isEditing, setEditing } = useState(false);
+  const [isEditing, setEditing] = useState(false);
   const [newName, setNewName] = useState('');
 
   function handleChange(e) {
@@ -60,7 +60,9 @@ export default function Todo(props) {
         </label>
       </div>
       <div className="btn-group">
-        <button type="button" className="btn" onClick={() => setEditing(true)}>
+        <button type="button" className="btn"
+        onClick={() => setEditing(true)}
+        >
           Edit <span className="visually-hidden">{props.name}</span>
         </button>
         <button
