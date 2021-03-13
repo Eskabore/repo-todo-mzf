@@ -61,12 +61,10 @@ function App(props) {
     setTasks(editedTaskList);
   }
 
-
   function deleteTask(id) {
     const remainingTasks = tasks.filter(task => id !==task.id);
     setTasks(remainingTasks);
   }
-
 
   function addTask(name) {
     const newTask = { id: "todo-" + nanoid(), name: name, completed: false};
@@ -116,5 +114,4 @@ function App(props) {
     </div>
   );
 }
-
 export default App;
